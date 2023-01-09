@@ -1,0 +1,15 @@
+# https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+# Time: O(N^2), Space: O(1)
+
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        left = 0
+        right = len(needle)
+        while right <= len(haystack):
+            if haystack[left:right] == needle:
+                return left
+            left += 1
+            right += 1
+        return -1
+
+
